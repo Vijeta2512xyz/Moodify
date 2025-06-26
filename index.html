@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moodify – Feel. Listen. Heal.</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%235e60ce'/><path d='M60 20v40a10 10 0 1 1-5-8V30h10v-10h-5z' fill='%23fff'/></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="bubble"></div>
+
+  <div class="hero">
+    <div class="logo">
+      <svg width="240" height="60" viewBox="0 0 300 60" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="moodGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#7400b8;" />
+            <stop offset="100%" style="stop-color:#72efdd;" />
+          </linearGradient>
+        </defs>
+        <text x="0" y="45" font-size="40" fill="url(#moodGradient)" font-family="Poppins, sans-serif">Moodify</text>
+      </svg>
+    </div>
+
+    <p class="tagline">Let your feelings choose the soundtrack.</p>
+    <a href="#app" class="cta-button">Start Now</a>
+  </div>
+
+  <section id="app" class="app-section">
+    <input type="text" id="moodInput" placeholder="How are you feeling today?" />
+    <div class="buttons">
+      <button onclick="generateMusic()">Generate Music</button>
+      <button onclick="startListening()">🎤 Speak Mood</button>
+    </div>
+    <div id="resultBox">
+      <h3>Suggested Playlists:</h3>
+      <div id="playlist"></div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
