@@ -1,0 +1,133 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #5e60ce, #72efdd);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.bubble {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, #80ffdb, #5e60ce);
+  border-radius: 50%;
+  top: 10%;
+  left: 10%;
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+
+.hero {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  z-index: 1;
+  position: relative;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #eeeeee;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  padding: 12px 30px;
+  background: #56cfe1;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #48bfe3;
+}
+
+.app-section {
+  background: rgba(255, 255, 255, 0.05);
+  max-width: 500px;
+  margin: 0 auto 100px;
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  text-align: center;
+  z-index: 1;
+}
+
+input {
+  width: 90%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  background: #ffffff10;
+  color: #ffffff;
+  outline: none;
+}
+
+input::placeholder {
+  color: #cccccc;
+}
+
+.buttons button {
+  margin: 6px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #56cfe1;
+  color: #fff;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #48bfe3;
+}
+
+#resultBox {
+  margin-top: 30px;
+  display: none;
+}
+
+#playlist a {
+  color: #80ffdb;
+  text-decoration: none;
+  display: block;
+  margin: 10px 0;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+#playlist a:hover {
+  text-decoration: underline;
+  color: #64dfdf;
+}
+
+@media screen and (max-width: 600px) {
+  .hero svg {
+    width: 180px;
+  }
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
